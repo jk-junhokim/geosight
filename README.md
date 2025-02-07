@@ -1,4 +1,4 @@
-# geolocation_error_reduction
+# Enhancing Object Geolocations through Perceptual Image Similarity
 
 Official directory for the paper "Enhancing Object Geolocations in Imagery to Improve Disaster Damage Mapping and Assessment."
 
