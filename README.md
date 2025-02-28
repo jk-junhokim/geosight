@@ -6,7 +6,7 @@ Currently under submission for ASCE Journal.
 
 #### Framework
 <!-- ![Alt text](/imgs/method_arch.png) -->
-<img src="/imgs/method_arch.png" alt="Building Detection" width="300" height="400">
+<img src="/imgs/method_arch.png" alt="Building Detection" width="300" height="500">
 
 #### Getting Started... 📦
 
@@ -29,7 +29,7 @@ Method: Fine-tune with building detection dataset
 Dataset: Building dEtection And Urban funcTional-zone portraYing (BEAUTY) [1]
 
 <!-- ![Alt text](/imgs/detect_train.png) -->
-<img src="/imgs/detect_train.png" alt="Building Detection" width="500" height="350">
+<img src="/imgs/detect_train.png" alt="Building Detection" width="600" height="350">
 
 #### Image Similarity
 
