@@ -1,26 +1,63 @@
-# Enhancing Object Geolocations through Perceptual Image Similarity
+## Intro
 
-Official directory for the paper "Enhancing Object Geolocations in Imagery to Improve Disaster Damage Mapping and Assessment."
+Official directory for "GeoSight: Enhancing Object Localization with Visual and Coordinate Referencing"
 
 Currently under submission for ASCE Journal.
 
+#### Framework
+![Alt text](/imgs/method_arch.png)
 
-### Building Detection
+#### Getting Started... 📦
+
+To set up the environment, run the following command:
+
+```
+conda env create -f env.yml
+```
+
+#### Building Detection
+
+![Alt text](/imgs/obj_detect.png)
 
 Model: Faster R-CNN
 Method: Fine-tune with building detection dataset
+Dataset: Building dEtection And Urban funcTional-zone portraYing (BEAUTY) [1]
+
+![Alt text](/imgs/detect_train.png)
+
+#### Image Similarity
+
+We would like to acknowledge the google colab provided by [2].
+
+Our similarity models are:
+* DreamSim <sup>[2]</sup>
+* DINO <sup>[3]</sup>
+* CLIP <sup>[4]</sup>
+* ViT <sup>[5]</sup>
+
+📌 Embed image features: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jk-junhokim/geosight/img_sim/feature_embedding.ipynb)
+📌 Perform image retrieval: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jk-junhokim/geosight/img_sim/image_retrieval.ipynb)
 
 
-### Image Similarity
+#### Results
 
-We would like to acknowledge the google colab notebook provided by https://dreamsim-nights.github.io/ .
+![Alt text](/imgs/retrieval_res.png)
 
-Our image similarity models (used as metrics) include DreamSim, DINO, CLIP, and ViT.
+#### Note
 
-The image similarity notebook was created based on the colab from DreamSim.
+Repo currently under construction.
 
-## Note
+Following will be released soon.
 
-The current repo is still under construction.
+* Original datasets (NOAA, GSV)
+* Model weights
 
-Original datasets (NOAA, GSV) and model weights will be released along with the paper's review.
+#### Acknowledgements
+Our code borrows from the ["DreamSim: Learning New Dimensions of Human Visual Similarity using Synthetic Data"](https://dreamsim-nights.github.io/) repository for image similarity model and weights.
+
+#### References
+[1] Zhao, Kun, et al. "Bounding boxes are all we need: street view image classification via context encoding of detected buildings." IEEE Transactions on Geoscience and Remote Sensing 60 (2021): 1-17.
+[2] Fu, Stephanie, et al. "Dreamsim: Learning new dimensions of human visual similarity using synthetic data." arXiv preprint arXiv:2306.09344 (2023).
+[3] Caron, Mathilde, et al. "Emerging properties in self-supervised vision transformers." Proceedings of the IEEE/CVF international conference on computer vision. 2021.
+[4] Radford, Alec, et al. "Learning transferable visual models from natural language supervision." International conference on machine learning. PmLR, 2021.
+[5] Dosovitskiy, Alexey, et al. "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv:2010.11929 (2020).
