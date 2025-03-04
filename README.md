@@ -4,7 +4,7 @@ Official directory for "GeoSight: Enhancing Object Localization with Visual and 
 
 Currently under submission for ASCE Journal.
 
-#### Framework
+## Framework
 <!-- ![Alt text](/imgs/method_arch.png) -->
 <img src="/imgs/method_arch.png" alt="Building Detection" width="300" height="500">
 
@@ -16,7 +16,7 @@ To set up the environment, run the following command:
 conda env create -f env.yml
 ```
 
-#### Building Detection
+## Building Detection
 
 <!-- ![Alt text](/imgs/obj_detect.png) -->
 <img src="/imgs/obj_detect.png" alt="Building Detection" width="500" height="350">
@@ -31,7 +31,7 @@ Dataset: Building dEtection And Urban funcTional-zone portraYing (BEAUTY) [1]
 ![Alt text](/imgs/detect_train.png)
 <!-- <img src="/imgs/detect_train.png" alt="Building Detection" width="700" height="350"> -->
 
-#### Image Similarity
+## Image Similarity
 
 We would like to acknowledge the google colab provided by [2].
 
@@ -47,11 +47,16 @@ Our similarity models are:
 📌  Perform image retrieval: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jk-junhokim/geosight/blob/main/image_similarity_and_retrieval/image_retrieval.ipynb)
 
 
-#### Results
+## Results
 
+📌  Image Retrieval Performance
 ![Alt text](/imgs/retrieval_res.png)
 
-#### Note
+
+📌  DreamSim-DINO Attention Map Visualization
+![Alt text](/imgs/attention_map.png)
+
+## Note
 
 Repo currently under construction.
 
@@ -60,10 +65,10 @@ Following will be released soon.
 * Original datasets (NOAA, GSV)
 * Model weights
 
-#### Acknowledgements
+## Acknowledgements
 Our code borrows from the ["DreamSim: Learning New Dimensions of Human Visual Similarity using Synthetic Data"](https://dreamsim-nights.github.io/) repository for image similarity model and weights.
 
-#### References
+## References
 [1] Zhao, Kun, et al. "Bounding boxes are all we need: street view image classification via context encoding of detected buildings." IEEE Transactions on Geoscience and Remote Sensing 60 (2021): 1-17.
 
 [2] Fu, Stephanie, et al. "Dreamsim: Learning new dimensions of human visual similarity using synthetic data." arXiv preprint arXiv:2306.09344 (2023).
