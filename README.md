@@ -50,10 +50,12 @@ Our similarity models are:
 ## Results
 
 📌  Image Retrieval Performance
+
 ![Alt text](/imgs/retrieval_res.png)
 
 
 📌  DreamSim-DINO Attention Map Visualization
+
 ![Alt text](/imgs/attention_map.png)
 
 ## Note
@@ -66,12 +68,12 @@ Following will be released soon.
 * Model weights
 
 ## Acknowledgements
-Our code borrows from the ["DreamSim: Learning New Dimensions of Human Visual Similarity using Synthetic Data"](https://dreamsim-nights.github.io/) repository for image similarity model and weights.
+Our code borrows from ["DreamSim: Learning New Dimensions of Human Visual Similarity using Synthetic Data"](https://dreamsim-nights.github.io/) repository for image similarity model and weights (DINO, CLIP, ViT).
 
 ## References
 [1] Zhao, Kun, et al. "Bounding boxes are all we need: street view image classification via context encoding of detected buildings." IEEE Transactions on Geoscience and Remote Sensing 60 (2021): 1-17.
 
-[2] Fu, Stephanie, et al. "Dreamsim: Learning new dimensions of human visual similarity using synthetic data." arXiv preprint arXiv:2306.09344 (2023).
+[2] Fu, Stephanie, et al. "DreamSim: Learning New Dimensions of Human Visual Similarity Using Synthetic Data." Advances in Neural Information Processing Systems, vol. 36, 2023, pp. 50742–50768.
 
 [3] Caron, Mathilde, et al. "Emerging properties in self-supervised vision transformers." Proceedings of the IEEE/CVF international conference on computer vision. 2021.
 
