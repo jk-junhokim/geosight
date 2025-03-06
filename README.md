@@ -54,9 +54,14 @@ Our similarity models are:
 ![Alt text](/imgs/retrieval_res.png)
 
 
-📌  DreamSim-DINO Attention Map Visualization
+📌  DreamSim-DINO & CLIP Attention Map Visualization
 
-![Alt text](/imgs/attention_map.png)
+![Alt text](/imgs/att_map_1.png)
+
+
+📌  DreamSim-DINO Attention Map for "Top 1 Retrieval" vs "No Retrieval"
+
+![Alt text](/imgs/att_map_2.png)
 
 ## Note
 
