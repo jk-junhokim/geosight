@@ -1,12 +1,12 @@
 import torch
-
+import tqdm
 from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve
 
 from dataloader import *
 from utils import *
 
 
-# Calculate Intersection over Union (IoU) between two boxes
+# Calculate Intersection over Union between two boxes
 def calculate_iou(box1, box2):
     x1_inter = max(box1[0], box2[0])
     y1_inter = max(box1[1], box2[1])
@@ -40,7 +40,7 @@ def compute_ap(gt_boxes, pred_boxes, pred_scores, iou_threshold=0.5):
 
         if max_iou >= iou_threshold and matched_gt[max_iou_idx] == 0:
             tp[i] = 1
-            matched_gt[max_iou_idx] = 1  # Mark this GT as matched
+            matched_gt[max_iou_idx] = 1  # mark GT as matched
         else:
             fp[i] = 1
 
@@ -54,23 +54,21 @@ def compute_ap(gt_boxes, pred_boxes, pred_scores, iou_threshold=0.5):
     recalls = cum_tp / len(gt_boxes) if len(gt_boxes) > 0 else np.array([0])
     precisions = cum_tp / (cum_tp + cum_fp + 1e-8)
 
-    # Ensure precision-recall curve starts from (0,1)
+    # Ensure PR curve range
     recalls = np.concatenate(([0.], recalls))
     precisions = np.concatenate(([1.], precisions))
 
-    # Compute AP as area under the precision-recall curve
+    # Compute AP as area under the PR curve
     ap = np.trapz(precisions, recalls)
     return ap, precisions, recalls
 
-# Evaluate the model on the test set and calculate mAP
+# Eval model on the test set and calculate mAP
 def evaluate_model_on_test_set(model, test_loader, device, iou_threshold=0.5):
     model.eval()
     all_gt_boxes = []
     all_pred_boxes = []
     all_pred_scores = []
 
-    # Also store binary predictions for ROC/Confusion matrix
-    # We'll define a threshold for binary classification for demonstration purposes
     binary_threshold = 0.8
     binary_true = []
     binary_pred = []
@@ -91,9 +89,6 @@ def evaluate_model_on_test_set(model, test_loader, device, iou_threshold=0.5):
                 all_pred_scores.extend(pred_scores)
 
                 # TODO: Test this evaluation methods
-                # For binary classification: any GT means positive
-                # If no bounding box is given as GT, treat as negative
-                # This is simplistic and may not reflect true object detection metrics.
                 gt_label = 1 if len(gt_boxes) > 0 else 0
                 # Predict positive if any predicted box score > threshold
                 pred_label = 1 if np.any(pred_scores > binary_threshold) else 0
@@ -105,14 +100,14 @@ def evaluate_model_on_test_set(model, test_loader, device, iou_threshold=0.5):
     all_pred_boxes = np.array(all_pred_boxes)
     all_pred_scores = np.array(all_pred_scores)
 
-    # Proceed to compute AP
+    # Compute AP
     ap, precisions, recalls = compute_ap(all_gt_boxes,
                                         all_pred_boxes, 
                                         all_pred_scores, 
                                         iou_threshold)
     # return ap, precisions, recalls
 
-    # Compute binary metrics for demonstration (Confusion Matrix, ROC)
+    # Confusion Matrix, ROC
     cm = confusion_matrix(binary_true, binary_pred)
     fpr, tpr, _ = roc_curve(binary_true, binary_pred)
     prec_curve, rec_curve, _ = precision_recall_curve(binary_true, binary_pred)

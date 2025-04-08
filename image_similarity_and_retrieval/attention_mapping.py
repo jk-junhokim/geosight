@@ -10,7 +10,7 @@ import os
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model, preprocess = dreamsim(pretrained=True, device=device)
 
-# TODO: Add Image Path
+# TODO: 
 zip_path = ""  # Path to .zip file
 extract_path = ""  #
 
@@ -48,5 +48,4 @@ for i, img_path in enumerate(selected_images):
         overlay = cv2.addWeighted(img_np, 0.6, heatmap, 0.4, 0)
         
         # TODO: Define Save Path
-        
         cv2.imwrite(f".jpg", overlay) 
