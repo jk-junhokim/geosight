@@ -1,8 +1,6 @@
 ## Intro
 
-Official directory for "**GeoSight: Enhancing Object Geolocalization with Visual Similarity and Coordinate Referencing**"
-
-Currently under review.
+Official directory for "**GeoSight: Enhancing Object Geolocalization with Visual Similarity and Coordinate Referencing**" *(Currently under review)*
 
 <!-- ## Framework -->
 <!-- ![Alt text](/imgs/method_arch.png) -->
@@ -16,7 +14,11 @@ To set up the environment, run the following command:
 conda env create -f env.yml
 ```
 
-<!-- ## Building Detection -->
+- *Current repo does not have the datasets. We will release the dataset once the paper is published.*
+- *The code currently contains all dataloaders, model trainers, experiments, evaluations, and visualizations.*
+- *Executable code will be released along with the dataset. (updated May 2025)*
+
+## Building Detection
 
 <!-- ![Alt text](/imgs/obj_detect.png) -->
 <!-- <img src="/imgs/obj_detect.png" alt="Building Detection" width="500" height="350"> -->
@@ -26,14 +28,14 @@ Model: Faster R-CNN
 
 Method: Fine-tune with building detection dataset
 
-Dataset: Building dEtection And Urban funcTional-zone portraYing (BEAUTY) [1]
+Dataset: Building dEtection And Urban funcTional-zone portraYing (BEAUTY) <sup>[1]</sup>
 
 <!-- ![Alt text](/imgs/detect_train.png) -->
 <!-- <img src="/imgs/detect_train.png" alt="Building Detection" width="700" height="350"> -->
 
 ## Image Similarity
 
-We would like to acknowledge the google colab provided by [2].
+We would like to acknowledge the DreamSim google colab <sup>[2]</sup>.
 
 Our similarity models are:
 * DreamSim <sup>[2]</sup>
@@ -65,9 +67,7 @@ Our similarity models are:
 
 ## Note
 
-Repo currently under construction.
-
-Following will be released soon.
+Following datasets will be released once paper is published. Thank you.
 
 * Original datasets (NOAA, GSV)
 * Model weights
