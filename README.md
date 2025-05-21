@@ -1,12 +1,12 @@
 ## Intro
 
-Official directory for "GeoSight: Enhancing Object Localization with Visual and Coordinate Referencing"
+Official directory for "**GeoSight: Enhancing Object Geolocalization with Visual Similarity and Coordinate Referencing**"
 
-Currently under submission for ASCE Journal.
+Currently under review.
 
-## Framework
+<!-- ## Framework -->
 <!-- ![Alt text](/imgs/method_arch.png) -->
-<img src="/imgs/method_arch.png" alt="Building Detection" width="300" height="500">
+<!-- <img src="/imgs/method_arch.png" alt="Building Detection" width="300" height="500"> -->
 
 #### Getting Started... 📦
 
@@ -16,10 +16,10 @@ To set up the environment, run the following command:
 conda env create -f env.yml
 ```
 
-## Building Detection
+<!-- ## Building Detection -->
 
 <!-- ![Alt text](/imgs/obj_detect.png) -->
-<img src="/imgs/obj_detect.png" alt="Building Detection" width="500" height="350">
+<!-- <img src="/imgs/obj_detect.png" alt="Building Detection" width="500" height="350"> -->
 
 
 Model: Faster R-CNN
@@ -28,7 +28,7 @@ Method: Fine-tune with building detection dataset
 
 Dataset: Building dEtection And Urban funcTional-zone portraYing (BEAUTY) [1]
 
-![Alt text](/imgs/detect_train.png)
+<!-- ![Alt text](/imgs/detect_train.png) -->
 <!-- <img src="/imgs/detect_train.png" alt="Building Detection" width="700" height="350"> -->
 
 ## Image Similarity
@@ -56,12 +56,12 @@ Our similarity models are:
 
 📌  DreamSim-DINO & CLIP Attention Map Visualization
 
-![Alt text](/imgs/att_map_1.png)
+<img src="/imgs/att_map_1.png" alt="txt" width="60%"/>
 
 
 📌  DreamSim-DINO Attention Map for "Top 1 Retrieval" vs "No Retrieval"
 
-![Alt text](/imgs/att_map_2.png)
+<img src="/imgs/att_map_2.png" alt="txt" width="60%"/>
 
 ## Note
 
